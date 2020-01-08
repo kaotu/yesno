@@ -6,6 +6,7 @@ from django.views import View
 
 from answers.models import Answer
 
+
 def answer_views(requests):
     answers = Answer.objects.all()
     answer = random.choice(answers)
@@ -19,6 +20,7 @@ def add_create_answer_views(requests):
     result_image = requests.POST['image']
     create_answer = Answer.objects.create(text=result_text, image=result_image)
     return redirect('answer_views')
+
 
 class CreateAnswerView(View):
     def get(self, requests, *args, **kwargs):

@@ -18,6 +18,7 @@ from django.urls import path
 
 from answers.views import *
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('answer/', answer_views, name='answer_views'),
