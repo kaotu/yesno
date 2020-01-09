@@ -18,13 +18,6 @@ class Command(BaseCommand):
         url = f'http://yesno.wtf/api/?force={params}'
         response = requests.get(url)
         data = response.json()
-
-        answer = Answer.objects.create(
-                text=data['answer'],
-                image=data['image']
-            )
-
+        answer = Answer.objects.create(text=data['answer'], image=data['image'])
         display = f'created: {str(answer.id)} {answer.text} {answer.image}'
-
         self.stdout.write(display)
-        #return super().handle(*args, **options)
