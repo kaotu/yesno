@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Create Answer</title>
 </head>
 <body>
     <h1>Create Answer</h1>
     <form method="post" action=".">
         {% csrf_token %}
         Text: <input type="text" name="text">
-        <br>
+        <br><br>
         Image: <input type="text" name="image">
         <br><br>
         <input type="submit" value="Submit">

@@ -16,13 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from answers.views import *
+from answers.views import answer_views, CreateAnswerView 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('answer/', answer_views, name='answer_views'),
-    path('create_answer/', create_answer_views, name='create_answer_views'),
-    path('create_answer/add_create_answer_views', add_create_answer_views, name='add_create_answer_views'),
-    path('create_answer_class/', CreateAnswerView.as_view(), name='add_create_answer_views_class')
+    path('create-answer-class/', CreateAnswerView.as_view(), name='add_create_answer_views_class')
 ]
