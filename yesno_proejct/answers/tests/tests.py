@@ -12,9 +12,7 @@ class CreateAnswerViewTest(TestCase):
 
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, '/answer/')
-
         answer = Answer.objects.last()
-
         self.assertEqual(answer.text, 'yes')
         self.assertEqual(answer.image, 'https://media1.giphy.com/media/fw8g5zvVepbal1w6KT/giphy.webp')
         
