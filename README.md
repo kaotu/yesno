@@ -9,5 +9,9 @@
 
 **pipenv**
 
-`$ pipenv install`
+`$ pipenv install`</br>
 `$ pipenv shell`
+
+## How to Runserver
+#### Must be at directory have manage.py file
+`$ python manage.py runserver`
